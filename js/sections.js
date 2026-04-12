@@ -39,9 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       start: 'top 80%',
     },
     opacity: 0,
-    y: 40,
     duration: 0.6,
-    stagger: 0.15,
     ease: 'power2.out',
   });
 
@@ -69,6 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: 0.4,
       ease: 'back.out(2)',
     });
+  });
+
+  // --- Wiki cards ---
+  gsap.from('.wiki-card', {
+    scrollTrigger: {
+      trigger: '.wiki__grid',
+      start: 'top 80%',
+    },
+    opacity: 0,
+    y: 30,
+    duration: 0.5,
+    stagger: 0.1,
+    ease: 'power2.out',
   });
 
   // --- Contact section ---

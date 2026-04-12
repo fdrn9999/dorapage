@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DoraPage - Developer Portfolio</title>
-  <meta name="description" content="도라에몽 테마 개발자 포트폴리오. 어디로든 문을 열고 들어와보세요!">
-  <meta property="og:title" content="DoraPage - Developer Portfolio">
+  <title>DoraPage - 정진호 Portfolio</title>
+  <meta name="description" content="정진호 - 백엔드 개발자 포트폴리오. 도라에몽 테마로 만든 어디로든 문을 열고 들어와보세요!">
+  <meta property="og:title" content="DoraPage - 정진호 Portfolio">
   <meta property="og:description" content="어디로든 문을 열고 들어와보세요!">
   <meta property="og:type" content="website">
 
@@ -71,6 +71,7 @@
           <li><a href="#skills" class="nav__link" data-section="skills">Skills</a></li>
           <li><a href="#projects" class="nav__link" data-section="projects">Projects</a></li>
           <li><a href="#experience" class="nav__link" data-section="experience">Experience</a></li>
+          <li><a href="#wiki" class="nav__link" data-section="wiki">Wiki</a></li>
           <li><a href="#contact" class="nav__link nav__link--cta" data-section="contact">Contact</a></li>
         </ul>
       </div>
@@ -88,6 +89,7 @@
           <li><a href="#skills" class="mobile-nav__link">Skills</a></li>
           <li><a href="#projects" class="mobile-nav__link">Projects</a></li>
           <li><a href="#experience" class="mobile-nav__link">Experience</a></li>
+          <li><a href="#wiki" class="mobile-nav__link">Wiki</a></li>
           <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
         </ul>
       </div>
@@ -99,8 +101,8 @@
         <div class="hero__content">
           <div class="hero__text">
             <p class="hero__greeting">안녕하세요! 저는</p>
-            <h1 class="hero__name">홍길동</h1>
-            <h2 class="hero__title">Full-Stack <span class="text-blue">Developer</span></h2>
+            <h1 class="hero__name">정진호</h1>
+            <h2 class="hero__title">Backend <span class="text-blue">Developer</span></h2>
             <p class="hero__desc">사차원 주머니처럼 다양한 기술을 꺼내,<br>어디로든 문처럼 어떤 문제든 해결합니다.</p>
             <div class="hero__buttons">
               <a href="#skills" class="btn btn--primary">
@@ -142,26 +144,27 @@
           <div class="about__grid">
             <div class="about__text">
               <p class="about__intro">
-                <span class="drop-cap">안</span>녕하세요! 저는 사용자 경험을 최우선으로 생각하는 풀스택 개발자입니다.
-                도라에몽의 사차원 주머니처럼, 다양한 기술 스택을 활용하여 문제를 해결하는 것을 좋아합니다.
+                <span class="drop-cap">안</span>녕하세요! 백엔드 개발자 정진호입니다.
+                어릴 때부터 컴퓨터와 코딩을 좋아했고, 도라에몽 같은 AI를 만들고 싶어서 AI와 컴퓨터를 전공했습니다.
               </p>
               <p>
-                프론트엔드부터 백엔드, 인프라까지 폭넓은 경험을 바탕으로
-                서비스의 전체 라이프사이클을 이해하고 효율적인 솔루션을 제안합니다.
+                유니진정보 인턴 실무 경험과 한화 BEYOND SW CAMP 교육을 통해
+                MSA 아키텍처, CQRS 패턴, DevOps까지 폭넓은 역량을 갖추었습니다.
+                주변의 불편함에서 아이디어를 발굴해 직접 서비스를 만들어 배포하는 것이 저의 원동력입니다.
               </p>
             </div>
             <div class="about__stats">
               <div class="stat-card">
-                <span class="stat-card__number">3+</span>
-                <span class="stat-card__label">Years Experience</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-card__number">10+</span>
+                <span class="stat-card__number">7+</span>
                 <span class="stat-card__label">Projects</span>
               </div>
               <div class="stat-card">
-                <span class="stat-card__number">5+</span>
-                <span class="stat-card__label">Tech Stacks</span>
+                <span class="stat-card__number">960h</span>
+                <span class="stat-card__label">BEYOND SW CAMP</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__number">MSA</span>
+                <span class="stat-card__label">Architecture</span>
               </div>
               <div class="stat-card">
                 <span class="stat-card__number">&infin;</span>
@@ -183,21 +186,17 @@
           </h2>
 
           <div class="pocket-area">
-            <!-- 4D Pocket (사차원 주머니: 위 직선, 아래 반달) -->
+            <!-- 4D Pocket -->
             <div class="pocket-scene" id="pocketBtn" role="button" tabindex="0" aria-label="사차원 주머니 열기" aria-expanded="false">
               <svg class="pocket-scene__svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                <!-- Pocket glow (behind) -->
                 <ellipse class="pocket-glow" cx="100" cy="60" rx="85" ry="55" fill="rgba(0,152,212,0.06)" />
-                <!-- Pocket body: flat top (opening), semicircle hanging below -->
                 <path class="pocket-body"
                   d="M 15 15 L 185 15 A 85 85 0 0 1 15 15 Z"
                   fill="white"
                   stroke="var(--doraemon-blue)"
                   stroke-width="3"
                 />
-                <!-- Top opening line (emphasized) -->
                 <line x1="12" y1="15" x2="188" y2="15" stroke="var(--doraemon-blue)" stroke-width="4.5" stroke-linecap="round" />
-                <!-- Sparkles floating up from the opening -->
                 <g class="pocket-sparkles">
                   <circle cx="55" cy="8" r="3" fill="var(--doraemon-yellow)" opacity="0">
                     <animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite" />
@@ -220,45 +219,85 @@
 
             <!-- Skill Cards -->
             <div class="skills__grid" id="skillsGrid" aria-live="polite">
-              <div class="skill-card" data-category="frontend">
-                <div class="skill-card__icon skill-card__icon--html">HTML5</div>
-                <span class="skill-card__name">HTML5</span>
+              <div class="skill-card" data-category="backend">
+                <div class="skill-card__icon skill-card__icon--java">Jv</div>
+                <span class="skill-card__name">Java</span>
                 <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 90%"></div></div>
               </div>
-              <div class="skill-card" data-category="frontend">
-                <div class="skill-card__icon skill-card__icon--css">CSS3</div>
-                <span class="skill-card__name">CSS3</span>
-                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 85%"></div></div>
-              </div>
-              <div class="skill-card" data-category="frontend">
-                <div class="skill-card__icon skill-card__icon--js">JS</div>
-                <span class="skill-card__name">JavaScript</span>
-                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 88%"></div></div>
-              </div>
-              <div class="skill-card" data-category="frontend">
-                <div class="skill-card__icon skill-card__icon--react">R</div>
-                <span class="skill-card__name">React</span>
-                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 82%"></div></div>
-              </div>
               <div class="skill-card" data-category="backend">
-                <div class="skill-card__icon skill-card__icon--node">N</div>
-                <span class="skill-card__name">Node.js</span>
-                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 80%"></div></div>
+                <div class="skill-card__icon skill-card__icon--spring">Sp</div>
+                <span class="skill-card__name">Spring Boot</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 88%"></div></div>
               </div>
               <div class="skill-card" data-category="backend">
                 <div class="skill-card__icon skill-card__icon--python">Py</div>
                 <span class="skill-card__name">Python</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 72%"></div></div>
+              </div>
+              <div class="skill-card" data-category="backend">
+                <div class="skill-card__icon skill-card__icon--c">C</div>
+                <span class="skill-card__name">C</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 65%"></div></div>
+              </div>
+              <div class="skill-card" data-category="frontend">
+                <div class="skill-card__icon skill-card__icon--js">JS</div>
+                <span class="skill-card__name">JavaScript</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 85%"></div></div>
+              </div>
+              <div class="skill-card" data-category="frontend">
+                <div class="skill-card__icon skill-card__icon--ts">TS</div>
+                <span class="skill-card__name">TypeScript</span>
                 <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 78%"></div></div>
+              </div>
+              <div class="skill-card" data-category="frontend">
+                <div class="skill-card__icon skill-card__icon--vue">V</div>
+                <span class="skill-card__name">Vue.js 3</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 82%"></div></div>
+              </div>
+              <div class="skill-card" data-category="frontend">
+                <div class="skill-card__icon skill-card__icon--nexacro">Nx</div>
+                <span class="skill-card__name">Nexacro</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 70%"></div></div>
+              </div>
+              <div class="skill-card" data-category="database">
+                <div class="skill-card__icon skill-card__icon--mysql">My</div>
+                <span class="skill-card__name">MySQL</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 85%"></div></div>
+              </div>
+              <div class="skill-card" data-category="database">
+                <div class="skill-card__icon skill-card__icon--oracle">Or</div>
+                <span class="skill-card__name">Oracle</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 75%"></div></div>
               </div>
               <div class="skill-card" data-category="devops">
                 <div class="skill-card__icon skill-card__icon--docker">D</div>
                 <span class="skill-card__name">Docker</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 80%"></div></div>
+              </div>
+              <div class="skill-card" data-category="devops">
+                <div class="skill-card__icon skill-card__icon--k8s">K8</div>
+                <span class="skill-card__name">Kubernetes</span>
                 <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 75%"></div></div>
               </div>
               <div class="skill-card" data-category="devops">
                 <div class="skill-card__icon skill-card__icon--git">G</div>
                 <span class="skill-card__name">Git</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 88%"></div></div>
+              </div>
+              <div class="skill-card" data-category="devops">
+                <div class="skill-card__icon skill-card__icon--jenkins">Jk</div>
+                <span class="skill-card__name">Jenkins</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 72%"></div></div>
+              </div>
+              <div class="skill-card" data-category="backend">
+                <div class="skill-card__icon skill-card__icon--sql">SQL</div>
+                <span class="skill-card__name">SQL</span>
                 <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 85%"></div></div>
+              </div>
+              <div class="skill-card" data-category="frontend">
+                <div class="skill-card__icon skill-card__icon--html">H5</div>
+                <span class="skill-card__name">HTML/CSS</span>
+                <div class="skill-card__bar"><div class="skill-card__fill" style="--fill: 80%"></div></div>
               </div>
             </div>
 
@@ -269,7 +308,7 @@
         </div>
       </section>
 
-      <!-- ===== AIR CANNON DIVIDER (Gemini SVG) ===== -->
+      <!-- ===== AIR CANNON DIVIDER ===== -->
       <div class="cannon-divider" id="cannonDivider" aria-hidden="true">
         <svg class="cannon-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -278,14 +317,11 @@
               <stop offset="100%" stop-color="var(--doraemon-blue-light)" stop-opacity="0" />
             </radialGradient>
           </defs>
-          <!-- Energy core -->
           <circle class="cannon-core" cx="200" cy="200" r="20" fill="var(--doraemon-blue)" opacity="0" />
-          <!-- Shock wave rings -->
           <circle class="cannon-ring" cx="200" cy="200" r="60" fill="none" stroke="var(--doraemon-blue)" stroke-width="6" opacity="0" />
           <circle class="cannon-ring" cx="200" cy="200" r="100" fill="none" stroke="var(--doraemon-blue)" stroke-width="5" opacity="0" />
           <circle class="cannon-ring" cx="200" cy="200" r="140" fill="none" stroke="var(--doraemon-blue)" stroke-width="4" opacity="0" />
           <circle class="cannon-ring" cx="200" cy="200" r="180" fill="none" stroke="var(--doraemon-blue)" stroke-width="2" opacity="0" />
-          <!-- Background gradient -->
           <circle class="cannon-bg" cx="200" cy="200" r="190" fill="url(#cannonGradient)" opacity="0" />
         </svg>
       </div>
@@ -304,55 +340,110 @@
           <div class="projects__grid">
             <article class="project-card">
               <div class="project-card__preview">
-                <div class="project-card__placeholder">
-                  <svg viewBox="0 0 60 60" width="60" height="60" fill="none" stroke="var(--doraemon-blue)" stroke-width="1.5" opacity="0.4"><rect x="8" y="8" width="44" height="44" rx="8"/><circle cx="22" cy="24" r="5"/><path d="M8 40l12-10 8 6 12-14 12 10"/></svg>
+                <div class="project-card__placeholder project-card__placeholder--accent">
+                  <span class="project-card__emoji">B2B</span>
                 </div>
               </div>
               <div class="project-card__body">
-                <h3 class="project-card__title">Project Name</h3>
-                <p class="project-card__desc">프로젝트에 대한 간단한 설명을 작성하세요.</p>
+                <h3 class="project-card__title">SalesBoost</h3>
+                <p class="project-card__desc">해외 B2B 영업관리 시스템. Tech Lead로 JWKS RS256 인증, 5계층 보안, RBAC, RT 회전, ArgoCD CI/CD 설계.</p>
                 <div class="project-card__tags">
-                  <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span>
+                  <span class="tag">Spring Security</span><span class="tag">JWT RS256</span><span class="tag">K8s</span><span class="tag">ArgoCD</span>
                 </div>
                 <div class="project-card__links">
-                  <a href="#" class="project-card__link">Live</a>
-                  <a href="#" class="project-card__link">GitHub</a>
+                  <a href="https://github.com/20251029-hanhwa-swcamp-22th/be22-final-team2-project" class="project-card__link" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
               </div>
             </article>
+
             <article class="project-card">
               <div class="project-card__preview">
-                <div class="project-card__placeholder">
-                  <svg viewBox="0 0 60 60" width="60" height="60" fill="none" stroke="var(--doraemon-blue)" stroke-width="1.5" opacity="0.4"><rect x="8" y="8" width="44" height="44" rx="8"/><circle cx="22" cy="24" r="5"/><path d="M8 40l12-10 8 6 12-14 12 10"/></svg>
+                <div class="project-card__placeholder project-card__placeholder--purple">
+                  <span class="project-card__emoji">AI</span>
                 </div>
               </div>
               <div class="project-card__body">
-                <h3 class="project-card__title">Project Name</h3>
-                <p class="project-card__desc">프로젝트에 대한 간단한 설명을 작성하세요.</p>
+                <h3 class="project-card__title">PaperLens</h3>
+                <p class="project-card__desc">AI 논문 분석 도구. TF-IDF/TextRank/N-gram CNN 3가지 알고리즘 키워드 자동 추출(100% 로컬), 프롬프트 인젝션 방어, Upstash Redis Rate Limiting.</p>
                 <div class="project-card__tags">
-                  <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
+                  <span class="tag">Next.js 15</span><span class="tag">TypeScript</span><span class="tag">Gemini API</span><span class="tag">Redis</span>
                 </div>
                 <div class="project-card__links">
-                  <a href="#" class="project-card__link">Live</a>
-                  <a href="#" class="project-card__link">GitHub</a>
+                  <a href="https://paper-lens-fawn.vercel.app" class="project-card__link" target="_blank" rel="noopener noreferrer">Live</a>
+                  <a href="https://github.com/fdrn9999/paper-lens" class="project-card__link" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
               </div>
             </article>
+
             <article class="project-card">
               <div class="project-card__preview">
-                <div class="project-card__placeholder">
-                  <svg viewBox="0 0 60 60" width="60" height="60" fill="none" stroke="var(--doraemon-blue)" stroke-width="1.5" opacity="0.4"><rect x="8" y="8" width="44" height="44" rx="8"/><circle cx="22" cy="24" r="5"/><path d="M8 40l12-10 8 6 12-14 12 10"/></svg>
+                <div class="project-card__placeholder project-card__placeholder--green">
+                  <span class="project-card__emoji">MSA</span>
                 </div>
               </div>
               <div class="project-card__body">
-                <h3 class="project-card__title">Project Name</h3>
-                <p class="project-card__desc">프로젝트에 대한 간단한 설명을 작성하세요.</p>
+                <h3 class="project-card__title">Next Page</h3>
+                <p class="project-card__desc">실시간 릴레이 소설 창작 플랫폼. 모놀리스에서 MSA(3서비스, 3DB)로 전환, CQRS 패턴(JPA/MyBatis 분리), Resilience4j Circuit Breaker 장애 격리.</p>
                 <div class="project-card__tags">
-                  <span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">AWS</span>
+                  <span class="tag">Spring Cloud</span><span class="tag">WebSocket</span><span class="tag">CQRS</span><span class="tag">Resilience4j</span>
                 </div>
                 <div class="project-card__links">
-                  <a href="#" class="project-card__link">Live</a>
-                  <a href="#" class="project-card__link">GitHub</a>
+                  <a href="https://github.com/fdrn9999/be22-2nd-team2-project" class="project-card__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__preview">
+                <div class="project-card__placeholder project-card__placeholder--yellow">
+                  <span class="project-card__emoji">GAME</span>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Snail Race</h3>
+                <p class="project-card__desc">2~15명 참가자 실시간 레이싱 추첨 시스템. 물리 엔진 시뮬레이션, Canvas Confetti 우승 이펙트, 배경음악 제어.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">Framer Motion</span><span class="tag">Vercel</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://snail-race-blush.vercel.app" class="project-card__link" target="_blank" rel="noopener noreferrer">Live</a>
+                  <a href="https://github.com/fdrn9999/snail-race" class="project-card__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__preview">
+                <div class="project-card__placeholder project-card__placeholder--red">
+                  <span class="project-card__emoji">RPG</span>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Hotel Sortis</h3>
+                <p class="project-card__desc">친치로 주사위 턴제 전략 로그라이크. 60개 스킬, 15층 캠페인, ELO PvP 랭크전, WebSocket 실시간 대전, 4개 언어 i18n.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Vue 3</span><span class="tag">Spring Boot</span><span class="tag">WebSocket</span><span class="tag">Redis</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://github.com/fdrn9999/hotel-sortis" class="project-card__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__preview">
+                <div class="project-card__placeholder">
+                  <span class="project-card__emoji">EDU</span>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">ChaCode</h3>
+                <p class="project-card__desc">프로그래밍 학습 플랫폼. Monaco Editor 브라우저 코드 실행(Python, JS, HTML/CSS), Spring Security + JWT 인증, 게이미피케이션, 코드 실행 보안 샌드박싱.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Spring Security</span><span class="tag">JWT</span><span class="tag">Vue 3</span><span class="tag">Monaco Editor</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://github.com/fdrn9999/chacode" class="project-card__link" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
               </div>
             </article>
@@ -378,13 +469,13 @@
                 <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="10" fill="var(--doraemon-yellow)" stroke="#DAA520" stroke-width="1.5"/><line x1="6" y1="12" x2="18" y2="12" stroke="#DAA520" stroke-width="1"/><circle cx="12" cy="14" r="1.5" fill="#DAA520"/></svg>
               </div>
               <div class="timeline__card">
-                <span class="timeline__date">2024 - Present</span>
-                <h3 class="timeline__role">Full-Stack Developer</h3>
-                <p class="timeline__company">ABC Company</p>
+                <span class="timeline__date">2025.10 - 2026.04</span>
+                <h3 class="timeline__role">Tech Lead / Backend Developer</h3>
+                <p class="timeline__company">한화 BEYOND SW CAMP 22기</p>
                 <ul class="timeline__details">
-                  <li>주요 서비스의 프론트엔드/백엔드 개발 및 유지보수</li>
-                  <li>마이크로서비스 아키텍처 전환 프로젝트 참여</li>
-                  <li>CI/CD 파이프라인 구축 및 배포 자동화</li>
+                  <li>SalesBoost(최종) Tech Lead — JWKS 기반 RS256 인증, 5계층 보안, RBAC, ArgoCD CI/CD</li>
+                  <li>Next Page 팀 리더 — 모놀리스→MSA 전환, CQRS, Circuit Breaker</li>
+                  <li>960시간 집중 교육: Java, Spring, MSA, DevOps, K8s</li>
                 </ul>
               </div>
             </div>
@@ -394,13 +485,13 @@
                 <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="10" fill="var(--doraemon-yellow)" stroke="#DAA520" stroke-width="1.5"/><line x1="6" y1="12" x2="18" y2="12" stroke="#DAA520" stroke-width="1"/><circle cx="12" cy="14" r="1.5" fill="#DAA520"/></svg>
               </div>
               <div class="timeline__card">
-                <span class="timeline__date">2022 - 2024</span>
-                <h3 class="timeline__role">Frontend Developer</h3>
-                <p class="timeline__company">XYZ Startup</p>
+                <span class="timeline__date">2025.04 - 2025.07</span>
+                <h3 class="timeline__role">Developer Intern</h3>
+                <p class="timeline__company">유니진정보</p>
                 <ul class="timeline__details">
-                  <li>React 기반 SPA 개발 및 성능 최적화</li>
-                  <li>디자인 시스템 구축 및 컴포넌트 라이브러리 개발</li>
-                  <li>사용자 경험 개선으로 이탈률 30% 감소</li>
+                  <li>대구보건대학교 차세대 행정시스템 개발</li>
+                  <li>넥사크로, JavaScript, Spring 전자정부프레임워크, Oracle DB</li>
+                  <li>실제 운영 데이터 기반 시스템 구축 경험</li>
                 </ul>
               </div>
             </div>
@@ -410,16 +501,64 @@
                 <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="10" fill="var(--doraemon-yellow)" stroke="#DAA520" stroke-width="1.5"/><line x1="6" y1="12" x2="18" y2="12" stroke="#DAA520" stroke-width="1"/><circle cx="12" cy="14" r="1.5" fill="#DAA520"/></svg>
               </div>
               <div class="timeline__card">
-                <span class="timeline__date">2020 - 2022</span>
-                <h3 class="timeline__role">Computer Science</h3>
-                <p class="timeline__company">University</p>
+                <span class="timeline__date">2021.01 - 2022.07</span>
+                <h3 class="timeline__role">HCTR 운용병 (병장 만기전역)</h3>
+                <p class="timeline__company">제1보병사단 전진부대 정보통신대대 지원2중대</p>
                 <ul class="timeline__details">
-                  <li>컴퓨터공학 전공</li>
-                  <li>졸업 프로젝트: AI 기반 추천 시스템 개발</li>
+                  <li>HCTR(고속회선전송장비) 운용 및 유지보수</li>
+                  <li>병장 만기제대</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item timeline__item--left">
+              <div class="timeline__node">
+                <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="10" fill="var(--doraemon-yellow)" stroke="#DAA520" stroke-width="1.5"/><line x1="6" y1="12" x2="18" y2="12" stroke="#DAA520" stroke-width="1"/><circle cx="12" cy="14" r="1.5" fill="#DAA520"/></svg>
+              </div>
+              <div class="timeline__card">
+                <span class="timeline__date">2019.03 - 2025.02</span>
+                <h3 class="timeline__role">AI소프트웨어 전공 (학사)</h3>
+                <p class="timeline__company">AI소프트웨어학과</p>
+                <ul class="timeline__details">
+                  <li>AI/컴퓨터공학 이론 기반 확립</li>
+                  <li>졸업 프로젝트 수행</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item timeline__item--right">
+              <div class="timeline__node">
+                <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="10" fill="var(--doraemon-yellow)" stroke="#DAA520" stroke-width="1.5"/><line x1="6" y1="12" x2="18" y2="12" stroke="#DAA520" stroke-width="1"/><circle cx="12" cy="14" r="1.5" fill="#DAA520"/></svg>
+              </div>
+              <div class="timeline__card">
+                <span class="timeline__date">2014</span>
+                <h3 class="timeline__role">첫 게임 개발</h3>
+                <p class="timeline__company">RPG MAKER XP</p>
+                <ul class="timeline__details">
+                  <li>중학교 2학년, Ruby로 첫 게임 제작</li>
+                  <li>서버-클라이언트 구조 설계, 친구들에게 배포 및 피드백</li>
                 </ul>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- ===== WIKI ===== -->
+      <section class="section wiki" id="wiki">
+        <div class="container">
+          <h2 class="section__title">
+            <span class="section__title-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--doraemon-blue)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </span>
+            Wiki
+          </h2>
+          <p class="section__subtitle">CS/AI 이론을 제가 이해한 방식으로 재밌게 풀어봅니다</p>
+
+          <div class="wiki__filters" id="wikiFilters"></div>
+          <div class="wiki__grid" id="wikiGrid"></div>
+          <div class="wiki__pagination" id="wikiPagination"></div>
+          <p class="wiki__empty" id="wikiEmpty" style="display:none;">아직 등록된 위키 글이 없습니다.</p>
         </div>
       </section>
 
@@ -450,17 +589,13 @@
             </div>
 
             <div class="contact__info">
-              <a href="mailto:your@email.com" class="contact__link contact__link--email">
+              <a href="mailto:chamsae_cs@naver.com" class="contact__link contact__link--email">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
-                your@email.com
+                chamsae_cs@naver.com
               </a>
               <a href="https://github.com/fdrn9999" class="contact__link" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
                 GitHub
-              </a>
-              <a href="https://linkedin.com" class="contact__link" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                LinkedIn
               </a>
             </div>
           </div>
@@ -474,6 +609,10 @@
       </div>
     </footer>
   </div>
+
+  <!-- Wiki Add-on: 이 스크립트를 추가하면 위키 글이 자동으로 로드됩니다 -->
+  <script src="wiki/articles.js" defer></script>
+  <script src="js/wiki-loader.js" defer></script>
 
   <script src="js/main.js" defer></script>
   <script src="js/navigation.js" defer></script>

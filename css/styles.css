@@ -569,7 +569,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-md);
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .skill-card {
@@ -606,6 +606,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .skill-card__icon--python { background: rgba(55,118,171,0.12); color: #3776AB; }
 .skill-card__icon--docker { background: rgba(36,150,237,0.12); color: #2496ED; }
 .skill-card__icon--git { background: rgba(240,80,50,0.12); color: #F05032; }
+.skill-card__icon--java { background: rgba(237,28,36,0.12); color: #ED1C24; }
+.skill-card__icon--spring { background: rgba(109,179,63,0.12); color: #6DB33F; }
+.skill-card__icon--vue { background: rgba(65,184,131,0.12); color: #41B883; }
+.skill-card__icon--ts { background: rgba(49,120,198,0.12); color: #3178C6; }
+.skill-card__icon--mysql { background: rgba(0,117,143,0.12); color: #00758F; }
+.skill-card__icon--k8s { background: rgba(50,109,230,0.12); color: #326DE6; }
+.skill-card__icon--oracle { background: rgba(240,80,50,0.12); color: #F80000; }
+.skill-card__icon--nexacro { background: rgba(0,102,204,0.12); color: #0066CC; }
+.skill-card__icon--c { background: rgba(85,85,85,0.12); color: #555555; }
+.skill-card__icon--jenkins { background: rgba(211,56,50,0.12); color: #D33833; }
+.skill-card__icon--sql { background: rgba(0,117,143,0.12); color: #336791; }
 
 .skill-card__name {
   display: block;
@@ -681,7 +692,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   justify-content: center;
 }
 
-.project-card__body { padding: var(--space-lg); }
+.project-card { display: flex; flex-direction: column; }
+.project-card__body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .project-card__title {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
@@ -692,6 +709,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   color: var(--color-text-muted);
   font-size: var(--text-sm);
   margin-bottom: var(--space-md);
+  flex: 1;
 }
 .project-card__tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-bottom: var(--space-md); }
 .tag {
@@ -822,6 +840,197 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .contact__link--email { background: white; color: var(--doraemon-blue); border-color: white; }
 .contact__link--email:hover { background: var(--doraemon-yellow-light); border-color: var(--doraemon-yellow); color: var(--doraemon-blue-dark); }
 
+/* ===== PROJECT CARD ACCENTS ===== */
+.project-card__placeholder--accent { background: linear-gradient(135deg, #E8F4FA, #B3E0F2); }
+.project-card__placeholder--green { background: linear-gradient(135deg, #E8F5E9, #A5D6A7); }
+.project-card__placeholder--purple { background: linear-gradient(135deg, #EDE7F6, #B39DDB); }
+.project-card__placeholder--yellow { background: linear-gradient(135deg, #FFF8E1, #FFD54F); }
+.project-card__placeholder--red { background: linear-gradient(135deg, #FFEBEE, #EF9A9A); }
+.project-card__emoji {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-text-muted);
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================
+   WIKI
+   ========================================================== */
+.wiki {
+  background: linear-gradient(180deg, var(--color-bg) 0%, #F0F4FF 50%, var(--color-bg) 100%);
+}
+
+.wiki__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.wiki__filter {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+.wiki__filter:hover {
+  border-color: var(--doraemon-blue-light);
+  color: var(--doraemon-blue);
+}
+.wiki__filter--active {
+  background: var(--doraemon-blue);
+  color: white;
+  border-color: var(--doraemon-blue);
+}
+
+.wiki__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.wiki-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border-left: 4px solid var(--doraemon-blue-light);
+}
+.wiki-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.wiki-card--open { border-left-color: var(--doraemon-blue); }
+
+.wiki-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+.wiki-card__category {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--doraemon-blue);
+  background: var(--doraemon-blue-bg);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+}
+.wiki-card__date {
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+}
+.wiki-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+.wiki-card__summary {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.wiki-card__content {
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--color-border);
+  margin-bottom: var(--space-md);
+  font-size: var(--text-sm);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+.wiki-card__content h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-base);
+  margin: var(--space-md) 0 var(--space-sm);
+  color: var(--doraemon-blue-dark);
+}
+.wiki-card__content h4:first-child { margin-top: 0; }
+.wiki-card__content p { margin-bottom: var(--space-sm); }
+.wiki-card__content ul { padding-left: var(--space-lg); margin-bottom: var(--space-sm); }
+.wiki-card__content li { margin-bottom: var(--space-xs); }
+.wiki-card__content code {
+  background: var(--doraemon-blue-bg);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--doraemon-blue-dark);
+}
+.wiki-card__content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-md);
+  font-size: var(--text-xs);
+}
+.wiki-card__content th, .wiki-card__content td {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+.wiki-card__content th {
+  background: var(--doraemon-blue-bg);
+  font-weight: 600;
+}
+
+.wiki-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--doraemon-blue);
+  transition: color var(--transition-fast);
+}
+.wiki-card__toggle:hover { color: var(--doraemon-blue-dark); }
+.wiki-card--open .wiki-card__toggle-icon { transform: rotate(180deg); }
+.wiki-card__toggle-icon { transition: transform var(--transition-base); }
+
+.wiki__pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+.wiki__page {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+.wiki__page:hover {
+  border-color: var(--doraemon-blue-light);
+  color: var(--doraemon-blue);
+}
+.wiki__page--active {
+  background: var(--doraemon-blue);
+  color: white;
+  border-color: var(--doraemon-blue);
+}
+
+.wiki__empty, .wiki__no-results {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  padding: var(--space-xl) 0;
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background: var(--doraemon-blue-dark);
@@ -879,6 +1088,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
     justify-content: flex-start;
   }
   .timeline__node { left: 20px; }
+
+  /* Wiki */
+  .wiki__grid { grid-template-columns: 1fr; }
 
   /* Contact */
   .dorayaki-img { width: 160px; }
