@@ -310,20 +310,15 @@
 
       <!-- ===== AIR CANNON DIVIDER ===== -->
       <div class="cannon-divider" id="cannonDivider" aria-hidden="true">
-        <svg class="cannon-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="cannonGradient" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="var(--doraemon-blue)" stop-opacity="0.8" />
-              <stop offset="100%" stop-color="var(--doraemon-blue-light)" stop-opacity="0" />
-            </radialGradient>
-          </defs>
-          <circle class="cannon-core" cx="200" cy="200" r="20" fill="var(--doraemon-blue)" opacity="0" />
-          <circle class="cannon-ring" cx="200" cy="200" r="60" fill="none" stroke="var(--doraemon-blue)" stroke-width="6" opacity="0" />
-          <circle class="cannon-ring" cx="200" cy="200" r="100" fill="none" stroke="var(--doraemon-blue)" stroke-width="5" opacity="0" />
-          <circle class="cannon-ring" cx="200" cy="200" r="140" fill="none" stroke="var(--doraemon-blue)" stroke-width="4" opacity="0" />
-          <circle class="cannon-ring" cx="200" cy="200" r="180" fill="none" stroke="var(--doraemon-blue)" stroke-width="2" opacity="0" />
-          <circle class="cannon-bg" cx="200" cy="200" r="190" fill="url(#cannonGradient)" opacity="0" />
-        </svg>
+        <div class="cannon-scene">
+          <div class="cannon-dora-wrap" id="cannonDoraWrap">
+            <img class="cannon-dora-frame" id="cannonFrame1" src="assets/images/dora-frame1.png" alt="" />
+            <img class="cannon-dora-frame cannon-dora-frame--hidden" id="cannonFrame2" src="assets/images/dora-frame2.png" alt="" />
+            <img class="cannon-dora-frame cannon-dora-frame--hidden" id="cannonFrame3" src="assets/images/dora-frame3.png" alt="" />
+            <img class="cannon-gun" id="cannonGun" src="assets/images/cannon.png" alt="" />
+          </div>
+          <img class="cannon-air" id="cannonAir" src="assets/images/air-blast.png" alt="" />
+        </div>
       </div>
 
       <!-- ===== PROJECTS ===== -->
@@ -609,6 +604,9 @@
       </div>
     </footer>
   </div>
+
+  <!-- Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js" defer></script>
 
   <!-- Wiki Add-on: 이 스크립트를 추가하면 위키 글이 자동으로 로드됩니다 -->
   <script src="wiki/articles.js" defer></script>

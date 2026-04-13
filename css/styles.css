@@ -654,7 +654,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 /* ===== AIR CANNON ===== */
 .cannon-divider {
-  height: 250px;
+  height: 160px;
   position: relative;
   display: flex;
   align-items: center;
@@ -662,10 +662,58 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   overflow: hidden;
 }
 
-.cannon-svg {
-  width: 400px;
-  height: 400px;
-  max-width: 100%;
+/* Sprite scene */
+.cannon-scene {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+}
+
+/* Pixel art: crisp upscaling */
+.cannon-dora-frame,
+.cannon-gun,
+.cannon-air {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+}
+
+/* Doraemon wrapper (holds frames + cannon gun) */
+.cannon-dora-wrap {
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  opacity: 0;
+}
+
+.cannon-dora-frame {
+  display: block;
+  width: 66px;
+  height: auto;
+}
+.cannon-dora-frame--hidden {
+  display: none;
+}
+
+/* Cannon gun overlaid on hand */
+.cannon-gun {
+  position: absolute;
+  width: 42px;
+  height: auto;
+  left: 26px;
+  top: 40px;
+  opacity: 0;
+}
+
+/* Air blast - positioned by JS at cannon muzzle */
+.cannon-air {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 56px;
+  height: auto;
+  opacity: 0;
+  transform-origin: left center;
 }
 
 /* ===== PROJECTS ===== */
@@ -965,6 +1013,85 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   font-size: 0.85em;
   color: var(--doraemon-blue-dark);
 }
+/* Markdown: fenced code blocks */
+.wiki-card__content pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+.wiki-card__content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.85em;
+}
+/* Markdown: blockquote */
+.wiki-card__content blockquote {
+  border-left: 4px solid var(--doraemon-blue-light);
+  background: var(--doraemon-blue-bg);
+  padding: var(--space-sm) var(--space-md);
+  margin: 0 0 var(--space-md) 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+.wiki-card__content blockquote p { margin-bottom: 0; }
+/* Markdown: headings */
+.wiki-card__content h1,
+.wiki-card__content h2,
+.wiki-card__content h3,
+.wiki-card__content h5,
+.wiki-card__content h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--doraemon-blue-dark);
+  margin: var(--space-md) 0 var(--space-sm);
+}
+.wiki-card__content h1:first-child,
+.wiki-card__content h2:first-child,
+.wiki-card__content h3:first-child { margin-top: 0; }
+.wiki-card__content h1 { font-size: 1.4em; }
+.wiki-card__content h2 { font-size: 1.25em; }
+.wiki-card__content h3 { font-size: 1.1em; }
+.wiki-card__content h5 { font-size: 0.95em; }
+.wiki-card__content h6 { font-size: 0.85em; color: var(--color-text-muted); }
+/* Markdown: ordered list */
+.wiki-card__content ol { padding-left: var(--space-lg); margin-bottom: var(--space-sm); }
+.wiki-card__content ol li { margin-bottom: var(--space-xs); }
+/* Markdown: horizontal rule */
+.wiki-card__content hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-md) 0;
+}
+/* Markdown: images */
+.wiki-card__content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  margin: var(--space-sm) 0;
+}
+/* Markdown: links */
+.wiki-card__content a {
+  color: var(--doraemon-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--doraemon-blue-light);
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+.wiki-card__content a:hover { color: var(--doraemon-blue-dark); }
+/* Markdown: strikethrough */
+.wiki-card__content del { color: var(--color-text-light); }
+/* Markdown: checkbox list */
+.wiki-card__content input[type="checkbox"] {
+  margin-right: var(--space-xs);
+  accent-color: var(--doraemon-blue);
+}
 .wiki-card__content table {
   width: 100%;
   border-collapse: collapse;
@@ -1119,8 +1246,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   .skill-card { padding: var(--space-md) var(--space-sm); }
   .skill-card__icon { width: 40px; height: 40px; font-size: var(--text-base); }
 
-  .cannon-divider { height: 150px; }
-  .cannon-svg { width: 280px; height: 280px; }
+  .cannon-divider { height: 120px; }
+  .cannon-dora-wrap { left: 5%; }
+  .cannon-dora-frame { width: 46px; }
+  .cannon-gun { width: 28px; left: 16px; top: 28px; }
+  .cannon-air { width: 36px; }
 
   .timeline__card { padding: var(--space-md); }
 

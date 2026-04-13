@@ -79,12 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
     summary.className = 'wiki-card__summary';
     summary.textContent = article.summary;
 
-    // Content (HTML from trusted local source)
+    // Content (HTML or Markdown from trusted local source)
     const content = document.createElement('div');
     content.className = 'wiki-card__content';
     content.style.display = 'none';
     // Safe: content comes from developer's own wiki/articles.js, not user input
-    content.innerHTML = article.content;  // eslint-disable-line no-unsanitized/property
+    if (article.format === 'md' && typeof marked !== 'undefined') {
+      content.innerHTML = marked.parse(article.content);  // eslint-disable-line no-unsanitized/property
+    } else {
+      content.innerHTML = article.content;  // eslint-disable-line no-unsanitized/property
+    }
 
     // Toggle button
     const toggle = document.createElement('button');
