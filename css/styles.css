@@ -660,6 +660,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  user-select: none;
+}
+.cannon-divider--ready { cursor: pointer; }
+.cannon-divider--ready .cannon-dora-wrap {
+  animation: cannon-idle 1.6s ease-in-out infinite;
+}
+@keyframes cannon-idle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
 }
 
 /* Sprite scene */
@@ -695,14 +704,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   display: none;
 }
 
-/* Cannon gun overlaid on hand */
+/* Cannon gun overlaid on hand (position/rotation controlled by JS) */
 .cannon-gun {
   position: absolute;
   width: 42px;
   height: auto;
-  left: 26px;
-  top: 40px;
+  left: 0;
+  top: 0;
   opacity: 0;
+  transform-origin: left center;
 }
 
 /* Air blast - positioned by JS at cannon muzzle */
