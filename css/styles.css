@@ -671,6 +671,36 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   50% { transform: translateY(-2px); }
 }
 
+/* Hint text: shown only in ready state, Doraemon color scheme */
+.cannon-hint {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: white;
+  background: var(--doraemon-red);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  border: 2px solid white;
+  box-shadow: 0 3px 0 var(--doraemon-red-dark), 0 6px 14px rgba(230, 0, 18, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.cannon-divider--ready .cannon-hint {
+  opacity: 1;
+  animation: cannon-hint-bounce 1.6s ease-in-out infinite;
+}
+@keyframes cannon-hint-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-3px); }
+}
+
 /* Sprite scene */
 .cannon-scene {
   position: relative;

@@ -111,6 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
     state = 'firing';
     divider.classList.remove('cannon-divider--ready');
 
+    // Hard reset air blast state before new fire
+    gsap.killTweensOf(air);
+    gsap.set(air, { opacity: 0, x: 0, scaleX: 1, scaleY: 1 });
+
     var tl = gsap.timeline({
       onComplete: function () {
         state = 'ready';
@@ -137,15 +141,17 @@ document.addEventListener('DOMContentLoaded', () => {
       var gunRect = gun.getBoundingClientRect();
       var sceneRect = scene.getBoundingClientRect();
       gsap.set(air, {
+        opacity: 1,
+        x: 0,
+        scaleX: 0.4,
+        scaleY: 0.4,
         left: (gunRect.right - sceneRect.left) + 'px',
         top: (gunRect.top - sceneRect.top + gunRect.height * 0.2) + 'px',
       });
     });
-    tl.to(air, { opacity: 1, duration: 0.01 });
-    tl.fromTo(air,
-      { x: 0, scaleX: 0.4, scaleY: 0.4 },
-      { x: 250, scaleX: 1.6, scaleY: 1.6, duration: 0.5, ease: 'power2.out' }
-    );
+    tl.to(air, {
+      x: 250, scaleX: 1.6, scaleY: 1.6, duration: 0.5, ease: 'power2.out',
+    });
     tl.to(air, { opacity: 0, duration: 0.15 }, '-=0.15');
 
     // Return to F3 (ready)
